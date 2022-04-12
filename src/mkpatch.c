@@ -88,6 +88,9 @@ uint8_t *mkpatch(const char *old_file, const char *new_file, uint32_t *patch_siz
     lzsize = diffsize + 10 * 1024;
     diff_lz = malloc(lzsize);
     lzma_compress(diff_lz, &lzsize, diff, diffsize, 12, 9);
+	
+	//删除中间文件
+	remove("diff_raw.bin");
     
     //写入文件  
     patch = malloc(16 + sizeof (buf) + lzsize + 1);
