@@ -17,7 +17,7 @@ static int ram_used_size = 0;
 static int ram_used_max = 0;
 #endif
 
-#ifndef WIN32
+#ifndef _WIN32
 #include "malloc.h"
 uint32_t _msize(const void *mp)
 {

@@ -7,7 +7,7 @@
 #include "bsdiff.h"
 #include "lzma_compress.h"
 
-#ifndef WIN32
+#ifndef _WIN32
 #define O_BINARY 0
 #endif
 
