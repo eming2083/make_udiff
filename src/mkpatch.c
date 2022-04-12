@@ -7,6 +7,10 @@
 #include "bsdiff.h"
 #include "lzma_compress.h"
 
+#ifndef WIN32
+#define O_BINARY 0
+#endif
+
 static int diff_data_write(struct bsdiff_stream* stream, const void* buffer, int size)
 {
     FILE *pf;

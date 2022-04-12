@@ -17,6 +17,14 @@ static int ram_used_size = 0;
 static int ram_used_max = 0;
 #endif
 
+#ifndef WIN32
+#include "malloc.h"
+uint32_t _msize(const void *mp)
+{
+    return(malloc_usable_size(mp));
+}
+#endif
+
 static void *lzma_alloc(ISzAllocPtr p, size_t size)
 {
     if(size == 0)
