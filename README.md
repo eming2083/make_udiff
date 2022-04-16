@@ -9,7 +9,7 @@
 
 ## 命令参考：
 
- `bsdiff_make_udiff.exe -o old.bin -n new.bin -p udiff.bin`
+ `make_udiff.exe -o old.bin -n new.bin -p udiff.bin`
 
 - 命令参数说明：
 
